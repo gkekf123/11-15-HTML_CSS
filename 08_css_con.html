@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후손 선택자</title>
+    <!--
+        CSS 우선 순위 : 
+        - CSS 적용은 상위에서 부터 상속, 누적 적용
+            CSS를 적용하다 보면 충돌이 발생
+            1. 송성 값 뒤에 ! important를 붙인 속성
+            2. html 태그 내에서 (인라인css), 엘리멘트
+            3. id 선택자 (#, id) 로 지정한 속성
+            4. class 선택자(., class) 로 지정한 속성
+            5. 태그(tag) 선택자로 지정한 석속
+            6. 사우이에서 상속된 속성
+
+            같은 순위에 있는 경우 -부모 -자식 관계가 많은 것이
+            나중에 선언 한 것이 우선순위가 높다
+    -->
+    <style>
+
+        h3{
+            color : red ! important;
+        }
+
+        #document {
+            color : black ! important;
+        }
+
+        #document span{ /* 후손 선택자 : 상위 선택자 호출 후 공백으로 선택자 호출 */
+            color : #ff0000;
+            font-style : italic;
+            font-weight : bold;
+        }
+        #method span{
+            color : #0000ff;
+            font-style : italic;
+            font-weight : bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>봄빛 수목원 직원 채용안내</h1>
+    <h3>- 제출 서류</h3>
+    <ul id="document">
+        <li><span>이력서</span>  (첨부 양식을 다운로드하여 작성)</li>
+        <li><span>자기소개서</span> (자유 양식으로 경력을 위주로 작성)</li>
+        <li><span>주민등록 등본</span> (주소 이동 내역 포함)</li>
+    </ul>
+    <h3 style = "color : blue;">- 제출 방법</h3>
+    <ul id="method">
+        <li>위 서류를 봄빛 수목원 인사 담당자에게 이메일로 제출</li>
+        <li>이메일 주소 : <span>master@bombit.net</span></li>
+    </ul>
+    
+</body>
+</html>

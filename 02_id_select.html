@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디(id) 선택자 : # </title>
+    <style>
+        p{              /* 태그선택자 */
+            color : #444444;
+            line-height: 150%;
+        }
+        #position{      /* 아이디(id) 선택자 호출 */
+            color : #ff0000;
+            font-weight: bold; 
+        }
+        #weather{       /* 아이디(id) 선택자 호출 */
+            color : #0000ff;
+            font-weight: bold;
+        }
+        #kind{          /* 아이디(id) 선택자 호출 */
+            color : #00ff00;
+            font-style: italic;
+            text-decoration: underline;
+        }
+        #title{         /* 아이디(id) 선택자 호출 */
+            color : purple;
+            font-size : 30px;
+            font-family : "궁서";
+        }
+        #sec{
+            color : rgb(187, 255, 0);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="title"> 다육식물이란? </h3>
+
+     <p id="sec">다육식물은 <span id="position">사막</span> 과 
+        같이 수분이 적고 <span id="weather">건조한 기후</span>에서
+        살아남기 위해 줄기나 잎에 많은 수분을 
+        저장하는 식물이다.
+        다육식물은 일반적으로 <span id="kind">잎이 다육</span>이지만 
+        줄기가 다육인 것도 있다.</p>
+</body>
+</html>
